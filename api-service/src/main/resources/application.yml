@@ -1,0 +1,22 @@
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+spring:
+  application:
+    name: api-service
+security:
+  oauth2:
+    client:
+      client-id: oauthClientId
+      client-secret: oauthClientSecret
+      accessTokenUri: http://localhost:9090/oauth/token
+      userAuthorizationUri: http://localhost:9090/oauth/authorize
+    resource:
+      jwt:
+        key-value: IT_SHOULD_BE_KEYPAIR
+ribbon:
+  eager-load:
+    enabled: true

@@ -1,0 +1,13 @@
+server:
+  port: 9090
+  servlet:
+    session:
+      cookie:
+        name: OAUTH_SESSION_ID
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+spring:
+  application:
+    name: oauth2-service
